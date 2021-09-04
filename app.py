@@ -4,7 +4,7 @@ from nnls import calc
 
 app = Flask(__name__, static_folder='./templates/images') 
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_SERVER'] = '公開用'
 app.config['MAIL_PORT'] = "公開用"
 app.config['MAIL_USERNAME'] = "公開用"
 app.config['MAIL_PASSWORD'] = "公開用"
