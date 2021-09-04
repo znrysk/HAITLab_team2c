@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from flask_mail import Mail, Message
-from nnls import calc
+from lsq_linear import calc
 
 app = Flask(__name__, static_folder='./templates/images') 
 
