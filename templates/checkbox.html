@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<style>
+  /* .v9_258 { 
+  width: 100%;
+  height: 1068px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  } */
+  .v9_259 { /**/
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/test.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* opacity: 0.3; */
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  .checkbox01 {
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      padding: 5px 30px;
+      position: relative;
+      width: auto;
+  }
+  .checkbox01::before {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 16px;
+      left: 5px;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      width: 16px;
+  }
+  .checkbox01::after {
+      border-right: 6px solid #fedd1e;
+      border-bottom: 3px solid #fedd1e;
+      content: '';
+      display: block;
+      height: 20px;
+      left: 7px;
+      margin-top: -16px;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg) translate3d(0,2px,0) scale3d(.7,.7,1);
+      transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+      width: 9px;
+  }
+  input[type=checkbox]:checked + .checkbox01::before {
+      border-color: #666;
+  }
+  input[type=checkbox]:checked + .checkbox01::after {
+      opacity: 1;
+      transform: rotate(45deg) scale3d(1,1,1);
+  }
+  .box27 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #62c1ce;
+  }
+  .box27 .box-title {
+      position: absolute;
+      display: inline-block;
+      top: -27px;
+      left: -3px;
+      padding: 0 9px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 17px;
+      background: #62c1ce;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+  }
+  .box27 p {
+      margin: 0; 
+      padding: 0;
+  }
+</style>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nutrients Calculator - Input</title>
+    <!-- どのデバイスで見ても見え方を一緒にする = レスポンシブデザイン -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <!-- 画像を背景にすると下の方が入らなくなってしまったので画像を外しました(塚本) -->
+    <!-- <div class="v9_258">
+      <div class="v9_259"> -->
+        <p>一食分(一人分)の食材を選んでください。栄養摂取基準に基づいてそれぞれの食材の量を最適化します。</p>
+        <form action="/result" method="POST">
+ 
+        <div class="box27">
+          <span class="box-title">穀類</span>
+          <!-- <label><input type="checkbox" name="food" value="29">食パン</label>
+          <label><input type="checkbox" name="food" value="50">うどん</label>
+          <label><input type="checkbox" name="food" value="130">お米</label>
+          <label><input type="checkbox" name="food" value="184">そば</label><br> -->
+          <input type="checkbox" id="29" name="food" value="29">
+          <label for="29" class="checkbox01">食パン</label>
+          <input type="checkbox" id="50" name="food" value="50">
+          <label for="50" class="checkbox01">うどん</label>
+          <input type="checkbox" id="130" name="food" value="130">
+          <label for="130" class="checkbox01">お米</label>
+          <input type="checkbox" id="184" name="food" value="184">
+          <label for="184" class="checkbox01">そば</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">いもおよびでん粉類</span>
+          <!-- <label><input type="checkbox" name="food" value="239">ジャガイモ（生）</label>
+          <label><input type="checkbox" name="food" value="240">ジャガイモ（水煮）</label>
+          <label><input type="checkbox" name="food" value="242">ジャガイモ（フライ）</label><br> -->
+          <input type="checkbox" id="239" name="food" value="239">
+          <label for="239" class="checkbox01">ジャガイモ（生）</label>
+          <input type="checkbox" id="240" name="food" value="240">
+          <label for="240" class="checkbox01">ジャガイモ（水煮）</label>
+          <input type="checkbox" id="242" name="food" value="242">
+          <label for="242" class="checkbox01">ジャガイモ（フライ）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">豆類</span>
+          <!-- <label><input type="checkbox" name="food" value="355">木綿豆腐</label>
+          <label><input type="checkbox" name="food" value="358">絹ごし豆腐</label>
+          <label><input type="checkbox" name="food" value="385">豆乳</label><br>
+          <label><input type="checkbox" name="food" value="476">えだ豆（生）</label>
+          <label><input type="checkbox" name="food" value="477">えだ豆（ゆで）</label>
+          <label><input type="checkbox" name="food" value="478">えだ豆（冷凍）</label><br> -->
+          <input type="checkbox" id="355" name="food" value="355">
+          <label for="355" class="checkbox01">木綿豆腐</label>
+          <input type="checkbox" id="358" name="food" value="358">
+          <label for="358" class="checkbox01">絹ごし豆腐</label>
+          <input type="checkbox" id="385" name="food" value="385">
+          <label for="385" class="checkbox01">豆乳</label><br>
+          <input type="checkbox" id="476" name="food" value="476">
+          <label for="476" class="checkbox01">えだ豆（生）</label>
+          <input type="checkbox" id="477" name="food" value="477">
+          <label for="477" class="checkbox01">えだ豆（ゆで）</label>
+          <input type="checkbox" id="478" name="food" value="478">
+          <label for="478" class="checkbox01">えだ豆（冷凍）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">野菜類</span>
+          <!-- <label><input type="checkbox" name="food" value="529">キャベツ（生）</label>
+          <label><input type="checkbox" name="food" value="530">キャベツ（ゆで）</label>
+          <label><input type="checkbox" name="food" value="531">キャベツ（油炒め）</label>
+          <label><input type="checkbox" name="food" value="534">きゅうり（生）</label><br>
+          <label><input type="checkbox" name="food" value="570">生姜</label>
+          <label><input type="checkbox" name="food" value="605">だいこん（生）</label>
+          <label><input type="checkbox" name="food" value="606">だいこん（ゆで）</label><br>
+          <label><input type="checkbox" name="food" value="630">たまねぎ（生）</label>
+          <label><input type="checkbox" name="food" value="631">たまねぎ（水さらし）</label>
+          <label><input type="checkbox" name="food" value="632">たまねぎ（ゆで）</label>
+          <label><input type="checkbox" name="food" value="633">たまねぎ（油炒め）</label><br>
+          <label><input type="checkbox" name="food" value="669">トマト</label> -->
+          <!-- <label><input type="checkbox" name="food" value="632">ミニトマト</label><br>
+          <label><input type="checkbox" name="food" value="682">なす（生）</label>
+          <label><input type="checkbox" name="food" value="683">なす（ゆで）</label>
+          <label><input type="checkbox" name="food" value="684">なす（油炒め）</label>
+          <label><input type="checkbox" name="food" value="685">なす（天ぷら）</label><br>
+          <label><input type="checkbox" name="food" value="708">にんじん（生）</label>
+          <label><input type="checkbox" name="food" value="709">にんじん（ゆで）</label>
+          <label><input type="checkbox" name="food" value="710">にんじん（油揚げ）</label>
+          <label><input type="checkbox" name="food" value="711">にんじん（素揚げ）</label><br>
+          <label><input type="checkbox" name="food" value="723">にんにく（生）</label>
+          <label><input type="checkbox" name="food" value="724">にんにく（ゆで）</label> -->
+          <!-- <label><input type="checkbox" name="food" value="727">ねぎ（生）</label>
+          <label><input type="checkbox" name="food" value="728">ねぎ（ゆで）</label>
+          <label><input type="checkbox" name="food" value="729">ねぎ（油炒め）</label><br>
+          <label><input type="checkbox" name="food" value="751">ピーマン（生）</label>
+          <label><input type="checkbox" name="food" value="752">ピーマン（油炒め）</label><br>
+          <label><input type="checkbox" name="food" value="771">ブロッコリー（生）</label>
+          <label><input type="checkbox" name="food" value="772">ブロッコリー（ゆで）</label>
+          <label><input type="checkbox" name="food" value="774">ブロッコリー（焼き）</label>
+          <label><input type="checkbox" name="food" value="775">ブロッコリー（油炒め）</label><br>
+          <label><input type="checkbox" name="food" value="465">アスパラガス</label>
+          <label><input type="checkbox" name="food" value="810">もやし（生）</label>
+          <label><input type="checkbox" name="food" value="811">もやし（ゆで）</label><br> -->
+          <input type="checkbox" id="465" name="food" value="465">
+          <label for="465" class="checkbox01">アスパラガス</label>
+          <input type="checkbox" id="529" name="food" value="529">
+          <label for="529" class="checkbox01">キャベツ（生）</label>
+          <input type="checkbox" id="530" name="food" value="530">
+          <label for="530" class="checkbox01">キャベツ（ゆで）</label>
+          <input type="checkbox" id="531" name="food" value="531">
+          <label for="531" class="checkbox01">キャベツ（油炒め）</label>
+          <input type="checkbox" id="534" name="food" value="534">
+          <label for="534" class="checkbox01">きゅうり（生）</label><br>
+          <input type="checkbox" id="570" name="food" value="570">
+          <label for="570" class="checkbox01">生姜</label>
+          <input type="checkbox" id="605" name="food" value="605">
+          <label for="605" class="checkbox01">だいこん（生）</label>
+          <input type="checkbox" id="606" name="food" value="606">
+          <label for="606" class="checkbox01">だいこん（ゆで）</label><br>
+          <input type="checkbox" id="630" name="food" value="630">
+          <label for="630" class="checkbox01">たまねぎ（生）</label>
+          <input type="checkbox" id="631" name="food" value="631">
+          <label for="631" class="checkbox01">たまねぎ（水さらし）</label>
+          <input type="checkbox" id="632" name="food" value="632">
+          <label for="632" class="checkbox01">たまねぎ（ゆで）</label>
+          <input type="checkbox" id="633" name="food" value="633">
+          <label for="633" class="checkbox01">たまねぎ（油炒め）</label><br>
+          <input type="checkbox" id="669" name="food" value="669">
+          <label for="669" class="checkbox01">トマト</label>
+          <input type="checkbox" id="672" name="food" value="672">
+          <label for="672" class="checkbox01">ミニトマト</label><br>
+          <input type="checkbox" id="682" name="food" value="682">
+          <label for="682" class="checkbox01">なす（生）</label>
+          <input type="checkbox" id="683" name="food" value="683">
+          <label for="683" class="checkbox01">なす（ゆで）</label>
+          <input type="checkbox" id="684" name="food" value="684">
+          <label for="684" class="checkbox01">なす（油炒め）</label>
+          <input type="checkbox" id="685" name="food" value="685">
+          <label for="685" class="checkbox01">なす（天ぷら）</label><br>
+          <input type="checkbox" id="708" name="food" value="708">
+          <label for="708" class="checkbox01">にんじん（生）</label>
+          <input type="checkbox" id="709" name="food" value="709">
+          <label for="709" class="checkbox01">にんじん（ゆで）</label>
+          <input type="checkbox" id="710" name="food" value="710">
+          <label for="710" class="checkbox01">にんじん（油揚げ）</label>
+          <input type="checkbox" id="711" name="food" value="711">
+          <label for="711" class="checkbox01">にんじん（素揚げ）</label><br>
+          <input type="checkbox" id="723" name="food" value="723">
+          <label for="723" class="checkbox01">にんにく（生）</label>
+          <input type="checkbox" id="724" name="food" value="724">
+          <label for="724" class="checkbox01">にんにく（ゆで）</label>
+          <input type="checkbox" id="727" name="food" value="727">
+          <label for="727" class="checkbox01">ねぎ（生）</label>
+          <input type="checkbox" id="728" name="food" value="728">
+          <label for="728" class="checkbox01">ねぎ（ゆで）</label>
+          <input type="checkbox" id="729" name="food" value="729">
+          <label for="729" class="checkbox01">ねぎ（油炒め）</label><br>
+          <input type="checkbox" id="751" name="food" value="751">
+          <label for="751" class="checkbox01">ピーマン（生）</label>
+          <input type="checkbox" id="752" name="food" value="752">
+          <label for="752" class="checkbox01">ピーマン（油炒め）</label><br>
+          <input type="checkbox" id="771" name="food" value="771">
+          <label for="771" class="checkbox01">ブロッコリー（生）</label>
+          <input type="checkbox" id="772" name="food" value="772">
+          <label for="772" class="checkbox01">ブロッコリー（ゆで）</label>
+          <input type="checkbox" id="774" name="food" value="774">
+          <label for="774" class="checkbox01">ブロッコリー（焼き）</label>
+          <input type="checkbox" id="775" name="food" value="775">
+          <label for="775" class="checkbox01">ブロッコリー（油炒め）</label><br>
+          <input type="checkbox" id="810" name="food" value="810">
+          <label for="810" class="checkbox01">もやし（生）</label>
+          <input type="checkbox" id="811" name="food" value="811">
+          <label for="811" class="checkbox01">もやし（ゆで）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">果実類</span>
+          <!-- <label><input type="checkbox" name="food" value="895">みかん</label>
+          <label><input type="checkbox" name="food" value="995">バナナ</label>
+          <label><input type="checkbox" name="food" value="1034">りんご</label><br> -->
+          <input type="checkbox" id="895" name="food" value="895">
+          <label for="895" class="checkbox01">みかん</label>
+          <input type="checkbox" id="995" name="food" value="995">
+          <label for="995" class="checkbox01">バナナ</label>
+          <input type="checkbox" id="1034" name="food" value="1034">
+          <label for="1034" class="checkbox01">りんご</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">きのこ類</span>
+          <!-- <label><input type="checkbox" name="food" value="1056">しいたけ（生）</label>
+          <label><input type="checkbox" name="food" value="1057">しいたけ（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1058">しいたけ（油揚げ）</label>
+          <label><input type="checkbox" name="food" value="1059">しいたけ（天ぷら）</label><br>
+          <label><input type="checkbox" name="food" value="1068">ぶなしめじ（生）</label>
+          <label><input type="checkbox" name="food" value="1069">ぶなしめじ（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1070">ぶなしめじ（油揚げ）</label>
+          <label><input type="checkbox" name="food" value="1071">ぶなしめじ（素揚げ）</label>
+          <label><input type="checkbox" name="food" value="1072">ぶなしめじ（天ぷら）</label><br> -->
+          <input type="checkbox" id="1056" name="food" value="1056">
+          <label for="1056" class="checkbox01">しいたけ（生）</label>
+          <input type="checkbox" id="1057" name="food" value="1057">
+          <label for="1057" class="checkbox01">しいたけ（ゆで）</label>
+          <input type="checkbox" id="1058" name="food" value="1058">
+          <label for="1058" class="checkbox01">しいたけ（油揚げ）</label>
+          <input type="checkbox" id="1059" name="food" value="1059">
+          <label for="1059" class="checkbox01">しいたけ（天ぷら）</label><br>
+          <input type="checkbox" id="1068" name="food" value="1068">
+          <label for="1068" class="checkbox01">ぶなしめじ（生）</label>
+          <input type="checkbox" id="1069" name="food" value="1069">
+          <label for="1069" class="checkbox01">ぶなしめじ（ゆで）</label>
+          <input type="checkbox" id="1070" name="food" value="1070">
+          <label for="1070" class="checkbox01">ぶなしめじ（油揚げ）</label>
+          <input type="checkbox" id="1071" name="food" value="1071">
+          <label for="1071" class="checkbox01">ぶなしめじ（素揚げ）</label>
+          <input type="checkbox" id="1072" name="food" value="1072">
+          <label for="1072" class="checkbox01">ぶなしめじ（天ぷら）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">藻類</span>
+          <!-- <label><input type="checkbox" name="food" value="1143">わかめ</label> -->
+          <input type="checkbox" id="1143" name="food" value="1143">
+          <label for="1143" class="checkbox01">わかめ</label>
+        </div>
+        <div class="box27">
+          <span class="box-title">魚介類</span>
+          <!-- <label><input type="checkbox" name="food" value="1157">マアジ（生）</label>
+          <label><input type="checkbox" name="food" value="1159">マアジ（水煮）</label>
+          <label><input type="checkbox" name="food" value="1160">マアジ（焼き）</label><br>
+          <label><input type="checkbox" name="food" value="1216">しらす（生）</label>
+          <label><input type="checkbox" name="food" value="1217">しらす（釜揚げ）</label><br>
+          <label><input type="checkbox" name="food" value="1338">マサバ（生）</label>
+          <label><input type="checkbox" name="food" value="1339">マサバ（水煮）</label>
+          <label><input type="checkbox" name="food" value="1340">マサバ（焼き）</label>
+          <label><input type="checkbox" name="food" value="1341">マサバ（フライ）</label><br>
+          <label><input type="checkbox" name="food" value="1352">さば缶(水煮)</label>
+          <label><input type="checkbox" name="food" value="1353">さば缶(味噌煮)</label>
+          <label><input type="checkbox" name="food" value="1607">魚肉ソーセージ</label><br> -->
+          <input type="checkbox" id="1157" name="food" value="1157">
+          <label for="1157" class="checkbox01">マアジ（生）</label>
+          <input type="checkbox" id="1159" name="food" value="1159">
+          <label for="1159" class="checkbox01">マアジ（水煮）</label>
+          <input type="checkbox" id="1160" name="food" value="1160">
+          <label for="1160" class="checkbox01">マアジ（焼き）</label><br>
+          <input type="checkbox" id="1216" name="food" value="1216">
+          <label for="1216" class="checkbox01">しらす（生）</label>
+          <input type="checkbox" id="1217" name="food" value="1217">
+          <label for="1217" class="checkbox01">しらす（釜揚げ）</label><br>
+          <input type="checkbox" id="1338" name="food" value="1338">
+          <label for="1338" class="checkbox01">マサバ（生）</label>
+          <input type="checkbox" id="1339" name="food" value="1339">
+          <label for="1339" class="checkbox01">マサバ（水煮）</label>
+          <input type="checkbox" id="1340" name="food" value="1340">
+          <label for="1340" class="checkbox01">マサバ（焼き）</label>
+          <input type="checkbox" id="1341" name="food" value="1341">
+          <label for="1341" class="checkbox01">マサバ（フライ）</label><br>
+          <input type="checkbox" id="1352" name="food" value="1352">
+          <label for="1352" class="checkbox01">さば缶(水煮)</label>
+          <input type="checkbox" id="1353" name="food" value="1353">
+          <label for="1353" class="checkbox01">さば缶(味噌煮)</label>
+          <input type="checkbox" id="1607" name="food" value="1607">
+          <label for="1607" class="checkbox01">魚肉ソーセージ</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">肉類</span>
+          <!-- <label><input type="checkbox" name="food" value="1691">牛かた肉</label>
+          <label><input type="checkbox" name="food" value="1709">牛もも肉（生）</label>
+          <label><input type="checkbox" name="food" value="1710">牛もも肉（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1711">牛もも肉（焼き）</label><br>
+          <label><input type="checkbox" name="food" value="1766">豚ロース（生）</label>
+          <label><input type="checkbox" name="food" value="1767">豚ロース（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1768">豚ロース（焼き）</label><br>
+          <label><input type="checkbox" name="food" value="1773">豚バラ肉（生）</label>
+          <label><input type="checkbox" name="food" value="1774">豚バラ肉（焼き）</label>
+          <label><input type="checkbox" name="food" value="1838">ウインナーソーセージ(豚)</label><br>
+          <label><input type="checkbox" name="food" value="1885">鶏むね肉（生）</label>
+          <label><input type="checkbox" name="food" value="1886">鶏むね肉（焼き）</label>
+          <label><input type="checkbox" name="food" value="1891">鶏もも肉（生）</label>
+          <label><input type="checkbox" name="food" value="1892">鶏もも肉（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1893">鶏もも肉（焼き）</label><br> -->
+          <input type="checkbox" id="1691" name="food" value="1691">
+          <label for="1691" class="checkbox01">牛かた肉</label>
+          <input type="checkbox" id="1709" name="food" value="1709">
+          <label for="1709" class="checkbox01">牛もも肉（生）</label>
+          <input type="checkbox" id="1710" name="food" value="1710">
+          <label for="1710" class="checkbox01">牛もも肉（ゆで）</label>
+          <input type="checkbox" id="1711" name="food" value="1711">
+          <label for="1711" class="checkbox01">牛もも肉（焼き）</label><br>
+          <input type="checkbox" id="1766" name="food" value="1766">
+          <label for="1766" class="checkbox01">豚ロース（生）</label>
+          <input type="checkbox" id="1767" name="food" value="1767">
+          <label for="1767" class="checkbox01">豚ロース（ゆで）</label>
+          <input type="checkbox" id="1768" name="food" value="1768">
+          <label for="1768" class="checkbox01">豚ロース（焼き）</label><br>
+          <input type="checkbox" id="1773" name="food" value="1773">
+          <label for="1773" class="checkbox01">豚バラ肉（生）</label>
+          <input type="checkbox" id="1774" name="food" value="1774">
+          <label for="1774" class="checkbox01">豚バラ肉（焼き）</label>
+          <input type="checkbox" id="1838" name="food" value="1838">
+          <label for="1838" class="checkbox01">ウインナーソーセージ(豚)</label><br>
+          <input type="checkbox" id="1885" name="food" value="1885">
+          <label for="1885" class="checkbox01">鶏むね肉（生）</label>
+          <input type="checkbox" id="1886" name="food" value="1886">
+          <label for="1886" class="checkbox01">鶏むね肉（焼き）</label>
+          <input type="checkbox" id="1891" name="food" value="1891">
+          <label for="1891" class="checkbox01">鶏もも肉（生）</label>
+          <input type="checkbox" id="1892" name="food" value="1892">
+          <label for="1892" class="checkbox01">鶏もも肉（ゆで）</label>
+          <input type="checkbox" id="1893" name="food" value="1893">
+          <label for="1893" class="checkbox01">鶏もも肉（焼き）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">卵類</span>
+          <!-- <label><input type="checkbox" name="food" value="1922">卵（生）</label>
+          <label><input type="checkbox" name="food" value="1923">卵（ゆで）</label>
+          <label><input type="checkbox" name="food" value="1924">卵（目玉焼き）</label>
+          <label><input type="checkbox" name="food" value="1925">卵（いり）</label><br> -->
+          <input type="checkbox" id="1922" name="food" value="1922">
+          <label for="1922" class="checkbox01">卵（生）</label>
+          <input type="checkbox" id="1923" name="food" value="1923">
+          <label for="1923" class="checkbox01">卵（ゆで）</label>
+          <input type="checkbox" id="1924" name="food" value="1924">
+          <label for="1924" class="checkbox01">卵（目玉焼き）</label>
+          <input type="checkbox" id="1925" name="food" value="1925">
+          <label for="1925" class="checkbox01">卵（いり）</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">乳類</span>
+          <!-- <label><input type="checkbox" name="food" value="1943">牛乳</label>
+          <label><input type="checkbox" name="food" value="1977">カマンベールチーズ</label>
+          <label><input type="checkbox" name="food" value="1984">モッツァレラチーズ</label><br> -->
+          <input type="checkbox" id="1943" name="food" value="1943">
+          <label for="1943" class="checkbox01">牛乳</label>
+          <input type="checkbox" id="1977" name="food" value="1977">
+          <label for="1977" class="checkbox01">カマンベールチーズ</label>
+          <input type="checkbox" id="1984" name="food" value="1984">
+          <label for="1984" class="checkbox01">モッツァレラチーズ</label><br>
+        </div>
+        <div class="box27">
+          <span class="box-title">調味料および香辛料類</span>
+          <!-- <label><input type="checkbox" name="food" value="2296">食塩</label><br> -->
+          <input type="checkbox" id="2296" name="food" value="2296">
+            <label for="2296" class="checkbox01">食塩</label><br>
+        </div>
+          <p><input type = "submit" value = "submit" /></p>
+          <a href="/">トップへ戻る</a>
+        </form>
+      <!-- </div>
+    </div> -->
+  </body>
+</html>

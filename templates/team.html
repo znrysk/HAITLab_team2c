@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    font-size: 14px;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .v11_2 { /*header*/
+    width: 100%;
+    height: 57px;
+    background: rgba(247,92,43,0.9399999976158142);
+    opacity: 1;
+    position: absolute;
+    top: 52px;
+    left: 0px;
+    overflow: hidden;
+    }
+    .v9_262 { /*最初の黒いブロック*/
+    width: 100%;
+    height: 52px;
+    background: rgba(30,30,30,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    }
+    .v9_265 { /*二番目の黒いブロック*/
+    width: 100%;
+    height: 1300px;
+    background: rgba(30,30,30,1);
+    opacity: 1;
+    position: absolute;
+    top: 109px;
+    left: 0px;
+    overflow: hidden;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .tanaka_picture { /**/
+    width: 250px;
+    height: 250px;
+    background: url("../images/tanaka.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 270px;
+    left: 180px;
+    overflow: hidden;
+    }
+    .tsukamoto_picture { /**/
+    width: 250px;
+    height: 250px;
+    background: url("../images/tsukamoto.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 20px;
+    left: 800px;
+    overflow: hidden;
+    }
+    .kobayashi_picture { /**/
+    width: 250px;
+    height: 250px;
+    background: url("../images/kobayashi.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 270px;
+    left: 180px;
+    overflow: hidden;
+    }
+    .kiarus_picture { /**/
+    width: 250px;
+    height: 250px;
+    background: url("../images/kiarus.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 20px;
+    left: 800px;
+    overflow: hidden;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .nutrition_cal { /**/
+    width: 271px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 54px;
+    left: 246px;
+    font-family: Mr De Haviland;
+    font-weight: Regular;
+    font-size: 48px;
+    opacity: 1;
+    text-align: center;
+    }
+    .home { /*HOME*/
+    width: 86px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 65px;
+    left: 682px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .calculater { /*CALCULATER*/
+    width: 151px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 65px;
+    left: 846px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .team { /*TEAM*/
+    width: 85px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 65px;
+    left: 1065px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .contact { /*CONTACT*/
+    width: 150px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 65px;
+    left: 1200px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .tanaka { /*NAME*/
+    width: 250px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+    }
+    .tsukamoto { /*NAME*/
+    width: 250px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 300px;
+    left: 1080px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+    }
+    .kobayashi { /*NAME*/
+    width: 350px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 780px;
+    left: 400px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+    }
+    .kiarus { /*NAME*/
+    width: 300px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 780px;
+    left: 1040px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .leader { /*leader*/
+    width: 250px;
+    top: 350px;
+    left: 450px;
+    color: rgba(247,92,43,0.9399999976158142);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .member1 { /*member*/
+    width: 250px;
+    top: 350px;
+    left: 1070px;
+    color: rgba(247,92,43,0.9399999976158142);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .member2 { /*member*/
+    width: 250px;
+    top: 830px;
+    left: 450px;
+    color: rgba(247,92,43,0.9399999976158142);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .member3 { /*member*/
+    width: 250px;
+    top: 830px;
+    left: 1070px;
+    color: rgba(247,92,43,0.9399999976158142);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+    .text { /*Tanaka's self-introduction*/
+    width: 230px;
+    top: 380px;
+    left: 470px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+    }
+    .text1 { /*Tsukamoto's self-introduction*/
+    width: 220px;
+    top: 380px;
+    left: 1080px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+    }
+    .text2 { /*Kobayashi's self-introduction*/
+    width: 220px;
+    top: 860px;
+    left: 470px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+    }
+    .text3 { /*Kiarus's self-introduction*/
+    width: 220px;
+    top: 860px;
+    left: 1080px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 14px;
+    opacity: 1;
+    text-align: center;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .us { /**/
+    width: 138px;
+    color: rgba(234,234,234,1);
+    position: absolute;
+    top: 1337px;
+    left: 700px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 11px;
+    opacity: 1;
+    text-align: center;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    .v10_283 { /*contact us*/
+    width: 158px;
+    height: 60px;
+    background: rgba(247,92,43,0.9399999976158142);
+    opacity: 1;
+    position: absolute;
+    top: 1150px;
+    left: 203px;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    }
+    .contact_us {
+    width: 107px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 1165px;
+    left: 226px;
+    font-family: Open Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+    }
+</style>
+
+
+<html>
+    <head><link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+        <title>Nutrients Calculator</title>
+    </head>
+    <body>
+        <div class="v11_2"></div>
+        <div class="v9_262"></div>
+        <div class="v9_265"></div>
+        <div class="v9_268"></div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <div class="tanaka_picture"></div>
+        <div class="tsukamoto_picture"></div>
+        <div class="kobayashi_picture"></div>
+        <div class="kiarus_picture"></div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <span class="tanaka">TANAKA HIROYUKI</span>
+        <span class="leader">LEADER</span>
+        <p class="text">名古屋大学大学院物質プロセス専攻所属です！</p>
+        <span class="tsukamoto">TSUKAMOTO KYOHEI</span>
+        <span class="member1">MEMBER</span>
+        <p class="text1">東京大学理学系研究科物理学専攻修士1年</p>
+        <span class="kobayashi">KOBAYASHI RYOTARO</span>
+        <span class="member2">MEMBER</span>
+        <p class="text2">東京大学工学部システム創成学科三年です。</p>
+        <span class="kiarus">OZUNO RYOSUKE</span>
+        <span class="member3">MEMBER</span>
+        <p class="text3">公立はこだて未来大学<br>システム情報科学部一年です。</p>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <span class="nutrition_cal">Nutrition Calculator</span>
+        <a href="/"><span class="home">HOME</span></a>
+        <a href="/input"><span class="calculater">CALCULATER</span></a>
+        <a href="/team"><span class="team">TEAM</span></a>
+        <a href="/contact_us"><span class="contact">Contact Us</span></a>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <span class="us">HAIT Lab 5th Team 2c</span>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <span class="v10_283"></span>
+        <a href="/contact_us"><span class="contact_us">Contact Us</span></a>
+
+
+    </body>
+</html>
